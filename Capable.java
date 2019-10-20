@@ -1,4 +1,5 @@
-public interface Capable{
+public interface Capable {
     public void hear();
+
     public void respond();
 }
