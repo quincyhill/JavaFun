@@ -1,4 +1,9 @@
-
+/**
+ * A class that represents a non persistent database
+ * 
+ * @author Quincy
+ * @version 1.0
+ */
 public class FakeDatabase {
     private int[] db = new int[3];
 
@@ -28,8 +33,19 @@ public class FakeDatabase {
         System.out.println(myString);
     }
 
-    public void updateDatabase() {
-        System.out.println("Not yet implemented");
+    public int addToDatabase(int location, int entry) {
+        this.db[location] += entry;
+        return this.db[location];
+    }
+
+    public int subtractFromDatabase(int location, int entry) {
+        this.db[location] += entry;
+        return this.db[location];
+    }
+
+    public int changeValueDatabase(int location, int entry) {
+        this.db[location] = entry;
+        return this.db[location];
     }
 
 }

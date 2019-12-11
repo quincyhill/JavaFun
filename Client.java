@@ -13,6 +13,10 @@ class Client {
 
         mydb.printStringDatabase();
 
+        System.out.println(mydb.addToDatabase(2, 9001));
+
+        mydb.printStringDatabase();
+
         Name myName = new Name("Quincy", "Hill");
 
         System.out.println(myName.getName());
