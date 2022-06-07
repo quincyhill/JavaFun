@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Client {
     public static void main(String[] args) {
 
@@ -25,6 +27,25 @@ class Client {
 
         System.out.println(myName.getFirst());
         System.out.println(myName.getLast());
+
+        Scanner scanner = new Scanner(System.in);
+        try {
+            // Do scanner stuff
+            System.out.println("Principal: ");
+            int principle = scanner.nextInt();
+
+            System.out.println("Annual Interest Rate: ");
+            float annualInterestRate = scanner.nextFloat();
+
+            System.out.println("Period in years: ");
+            int periodInYears = scanner.nextInt();
+
+            MortgageCalculator myMortgage = new MortgageCalculator(principle, annualInterestRate, periodInYears);
+
+            System.out.println("Monthly Payment: " + myMortgage.calculateMonthlyPayment());
+        } finally {
+            scanner.close();
+        }
 
     }
 }
