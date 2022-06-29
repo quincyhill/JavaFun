@@ -46,6 +46,5 @@ class Client {
         } finally {
             scanner.close();
         }
-
     }
 }
